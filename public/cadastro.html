@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnHub - Cadastro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            color: #333;
+            /* Cor do texto principal */
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .cadastro-box {
+            background-color: #8a2be2;
+            /* Tema principal: roxo */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 300px;
+            margin: 0 auto;
+            color: #fff;
+            /* Cor do texto dentro da caixa */
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        label,
+        input {
+            display: block;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+
+        input[type="submit"] {
+            padding: 10px;
+            background-color: #4caf50;
+            /* Cor secundária */
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+            /* Cor secundária - hover */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Cadastre-se no LearnHub</h1>
+        <div class="cadastro-box">
+            <h2>Cadastro</h2>
+            <form action="cadastro.php" method="POST" onsubmit="return redirecionarParaInicio()">
+                <!-- Formulário de cadastro -->
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" required>
+                <input type="submit" value="Cadastrar">
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function redirecionarParaInicio() {
+            // Aqui você pode adicionar a lógica de cadastro e, após o sucesso, redirecionar para a tela inicial
+            // Por exemplo, você pode adicionar um código que realiza a requisição para cadastrar o usuário no backend
+
+            // Simulando um redirecionamento após 2 segundos (pode ser alterado)
+            setTimeout(function () {
+                window.location.href = "index.html";
+            }, 2000); // Redireciona após 2 segundos (2000 milissegundos)
+
+            // Retorne false para prevenir o envio do formulário antes do redirecionamento
+            return false;
+        }
+    </script>
+</body>
+
+</html>
